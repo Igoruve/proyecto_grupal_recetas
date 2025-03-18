@@ -1,0 +1,52 @@
+/* Font family: Nunito
+
+
+AL poner la font-size en 62,5%, 1.6 rem equivale a 16px.
+
+móvil
+Font size párrafos: 1.6rem.
+Font weigth: 300-400 (vamos viendo)
+
+
+desktop
+Font size párrafos: 1.8rem.
+
+
+
+Paleta de colores: 
+    Color de texto: negro (probablemente)
+    Rosa intenso: #FF9494 Para los corazones de "Like" y para resaltar cosas (10% de la página) 
+    Amarillito: #FFF5E4 Para tarjetas, formularios, barras de búsqueda o lo que sea que vaya por encima del fondo. (30% de la página)
+    Rosa intermedio: #FFD1D1 Para el fondo de la página (60% de la página)
+    
+Border radious 10px
+Box shadow 1px 1px 5px gray
+
+    */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --pink-saturated: hsl(0, 100%, 79%);
+  --white-ish: hsl(38, 100%, 95%);
+  --pink-soft: hsl(0, 100%, 91%);
+}
+
+ol,
+ul {
+  list-style: none;
+}
