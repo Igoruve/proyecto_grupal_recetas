@@ -9,10 +9,10 @@ Font weigth: 400
 
 Paleta de colores: 
     Color de texto: negro (probablemente)
-    Rosa intenso: #FF9494 Para los corazones de "Like" y para resaltar cosas (10% de la página) 
+    Rosa intermedio: #FF9494 Para los corazones de "Like" y para resaltar cosas (10% de la página) 
     Amarillito: #FFF5E4 Para tarjetas, formularios, barras de búsqueda o lo que sea que vaya por encima del fondo. (30% de la página)
-    Rosa intermedio: #FFD1D1 Para el fondo de la página (60% de la página)
-    
+    Rosa suave: #FFD1D1 Para el fondo de la página (60% de la página)
+    Degradado posible: background: linear-gradient(220.55deg, #FF9494  0%, #FF6C6C 100%);
 Border radious 10px
 Box shadow 1px 1px 5px gray
 
@@ -35,11 +35,13 @@ html {
 }
 
 :root {
-  --pink-saturated: hsl(0, 100%, 79%);
-  --white-ish: hsl(38, 100%, 95%);
+  --pink-intense: hsl(0, 100%, 71%);
+  --pink-mid: hsl(0, 100%, 79%);
   --pink-soft: hsl(0, 100%, 91%);
+  --white-ish: hsl(38, 100%, 95%);
 }
 
+/* movil */
 h1 {
   font-size: 3.6rem;
   font-weight: 400;
