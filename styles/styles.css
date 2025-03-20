@@ -98,3 +98,71 @@ ul {
 a {
   text-decoration: none;
 }
+
+/* ------------ */
+/* daniel --- hacer que el footer se quede al final del html*/
+/* ------------ */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+main {
+  flex-grow: 1;
+  align-content: center;
+}
+
+/* styles for footer */
+footer {
+  background-color: var(--pink-soft);
+  padding: 1vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 2dvw;
+  font-size: 1.8rem;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1%;
+}
+
+.form-inputs input,
+.form-inputs button,
+.form-inputs textarea {
+  margin: 1%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  border-style: none;
+}
+
+/* footer styles for bigger screens */
+@media screen and (min-width: 1024px) {
+  footer {
+    font-size: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+  .form-inputs {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+
+  .form_footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  } 
+
+
+
+}
