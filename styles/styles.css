@@ -50,3 +50,23 @@ ol,
 ul {
   list-style: none;
 }
+
+
+/*CARDS STYLES*/
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.card {
+  border: 1px solid hsl(0, 100%, 79%);
+  border-radius: 5%;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+
