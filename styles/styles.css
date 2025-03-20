@@ -43,6 +43,11 @@ html {
 }
 
 /* movil */
+
+body {
+  background-color: var(--white);
+}
+
 h1 {
   font-size: 3.6rem;
   font-weight: 400;
@@ -61,7 +66,8 @@ h3 {
   line-height: 1.5;
 }
 
-p {
+p,
+a {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.5;
@@ -75,3 +81,32 @@ ul {
 a {
   text-decoration: none;
 }
+
+.header {
+  background-color: var(--white);
+  position: relative;
+}
+
+#section__nav__text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  translate: 0% -100%;
+}
+
+#section__nav__menu {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.lines line {
+  stroke: var(--pink-intense);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
