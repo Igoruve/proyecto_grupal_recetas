@@ -97,7 +97,7 @@ a {
 #header {
   background-color: var(--white);
   position: relative;
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   width: 100%;
 }
@@ -177,6 +177,8 @@ a {
   max-width: 700px;
   height: 500px;
   align-content: center;
+  z-index: 1;
+  position: relative;
 }
 
 #hero span {
@@ -185,8 +187,11 @@ a {
   border-radius: 10px;
   padding-inline: 18px;
 }
+.backgroundVideo{
+  display:none;
+  max-width:100vw;
+}
 
-/* tablet */
 @media (min-width: 600px) {
   h1 {
     font-size: 4.8rem;
@@ -218,6 +223,26 @@ a {
   #section__nav__text a:hover {
     color: black;
   }
+  .backgroundVideo{
+    position:absolute;
+    z-index:0;
+    display:block;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+  }
+  .backgroundVideo{
+    position:absolute;
+    z-index:0;
+    display:block;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+  }
 }
 
 /* desktop */
@@ -241,5 +266,10 @@ a {
   .logo {
     width: 64px;
     height: 64px;
+  }
+  @media (min-width: 1200px){
+    .backgroundVideo{
+      width:100%;
+    }
   }
 }
