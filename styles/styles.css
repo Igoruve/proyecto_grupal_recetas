@@ -184,7 +184,7 @@ a {
 
 .hero span {
   color: var(--pink-intense);
-  background-color: hsl(0, 0%, 100%, 40%);
+  background-color: hsl(0, 0%, 100%, 75%);
   border-radius: 10px;
   padding-inline: 18px;
 }
