@@ -43,10 +43,8 @@ html {
   --white: hsl(0, 0%, 100%);
 }
 
-/* movil */
 
 body {
-  max-width: 1200px;
   margin: 0 auto;
   background-color: var(--white);
   font-family: "Nunito", sans-serif;
@@ -181,7 +179,7 @@ a {
 }
 
 
-
+/* tablet */
 @media (min-width: 600px) {
   .logo {
     position: static;
@@ -212,7 +210,9 @@ a {
   }
 }
 
+/* desktop */
 @media (min-width: 1000px) {
+  
   .text__and__logo {
     margin-inline: 48px;
     margin-block: 48px;
