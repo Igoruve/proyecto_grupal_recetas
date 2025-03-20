@@ -1,0 +1,246 @@
+/* Font family: Nunito
+
+
+AL poner la font-size en 62,5%, 1.6 rem equivale a 16px.
+
+desktop
+Font size párrafos: 1.8rem.
+Font weigth: 400
+
+Paleta de colores: 
+    Color de texto: negro (probablemente)
+    Rosa intermedio: #FF9494 Para los corazones de "Like" y para resaltar cosas (10% de la página) 
+    Blanco: white Para tarjetas, formularios, barras de búsqueda o lo que sea que vaya por encima del fondo. (30% de la página)
+    Rosa suave: #FFD1D1 Para el fondo de la página (60% de la página)
+    Rosa intenso: #FF6C6C para cuando algo queda activado como un "Like"
+    Degradado posible: background: linear-gradient(220.55deg, #FF9494  0%, #FF6C6C 100%);
+Border radious 10px
+Box shadow 1px 1px 5px gray
+
+    */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --pink-intense: hsl(0, 100%, 71%);
+  --pink-mid: hsl(0, 100%, 79%);
+  --pink-soft: hsl(0, 100%, 91%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* movil */
+
+body {
+  margin: 0 auto;
+  background-color: var(--white);
+  font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.5;
+  margin-inline: 48px;
+  margin-block: 48px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+p,
+a {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#header {
+  background-color: var(--white);
+  position: relative;
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+}
+
+.text__and__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#section__nav__text {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+#section__nav__text a {
+  transition: color 150ms ease-in-out;
+}
+
+#section__nav__menu {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.lines line {
+  stroke: var(--pink-intense);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.hamburger.active .top {
+  transform: translateY(5px) rotate(45deg);
+  transform-origin: 50% 50%;
+}
+
+.hamburger.active .middle {
+  opacity: 0;
+}
+
+.hamburger.active .bottom {
+  transform: translateY(-10px) rotate(-45deg);
+  transform-origin: 50% 50%;
+}
+
+#section__nav__text.show {
+  margin-top: 100px;
+  width: 100%;
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  padding: 24px;
+  box-shadow: 0px 7px 5px -2px hsl(0, 0%, 75%);
+  border-radius: 8px;
+  opacity: 1;
+  transform: translateY(0);
+}
+#section__nav__text.show a {
+  font-size: 2rem;
+  padding-bottom: 24px;
+}
+
+.logo {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+.hero {
+  max-width: 600px;
+  height: 500px;
+  align-content: center;
+  z-index: 1;
+  position: relative;
+}
+
+.hero span {
+  color: var(--pink-intense);
+}
+.backgroundVideo{
+  display:none;
+}
+
+@media (min-width: 600px) {
+  .logo {
+    position: static;
+    top: 0px;
+    left: 0px;
+  }
+  .text__and__logo {
+    margin-inline: 24px;
+    margin-block: 24px;
+  }
+  #section__nav__menu {
+    visibility: hidden;
+  }
+  #section__nav__text {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    display: flex;
+    justify-content: flex-end;
+  }
+  #section__nav__text a {
+    margin-left: 24px;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  #section__nav__text a:hover {
+    color: var(--pink-mid);
+  }
+  .backgroundVideo{
+    position:absolute;
+    z-index:0;
+    display:block;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+  }
+}
+
+@media (min-width: 1000px) {
+  .text__and__logo {
+    margin-inline: 48px;
+    margin-block: 48px;
+  }
+  #section__nav__text a {
+    margin-left: 48px;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+  }
+  .logo {
+    width: 64px;
+    height: 64px;
+  }
+  @media (min-width: 1200px){
+    .backgroundVideo{
+      width:100%;
+    }
+  }
+}
