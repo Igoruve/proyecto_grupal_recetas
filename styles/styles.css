@@ -46,7 +46,6 @@ html {
 /* movil */
 
 body {
-  max-width: 1200px;
   margin: 0 auto;
   background-color: var(--white);
   font-family: "Nunito", sans-serif;
@@ -94,7 +93,7 @@ a {
 #header {
   background-color: var(--white);
   position: relative;
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   width: 100%;
 }
@@ -174,13 +173,16 @@ a {
   max-width: 600px;
   height: 500px;
   align-content: center;
+  z-index: 1;
+  position: relative;
 }
 
 .hero span {
   color: var(--pink-intense);
 }
-
-
+.backgroundVideo{
+  display:none;
+}
 
 @media (min-width: 600px) {
   .logo {
@@ -210,6 +212,16 @@ a {
   #section__nav__text a:hover {
     color: var(--pink-mid);
   }
+  .backgroundVideo{
+    position:absolute;
+    z-index:0;
+    display:block;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+  }
 }
 
 @media (min-width: 1000px) {
@@ -225,5 +237,10 @@ a {
   .logo {
     width: 64px;
     height: 64px;
+  }
+  @media (min-width: 1200px){
+    .backgroundVideo{
+      width:100%;
+    }
   }
 }
