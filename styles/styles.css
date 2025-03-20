@@ -43,22 +43,25 @@ html {
   --white: hsl(0, 0%, 100%);
 }
 
-/* movil */
-
 body {
   margin: 0 auto;
   background-color: var(--white);
   font-family: "Nunito", sans-serif;
 }
 
+main {
+  background-color: var(--pink-soft);
+}
+
 h1 {
   font-size: 3.6rem;
-  font-weight: 600;
+  font-weight: 900;
   line-height: 1.3;
   letter-spacing: 0.5;
   margin-inline: 48px;
   margin-block: 48px;
   text-transform: uppercase;
+  color: var(--white);
 }
 
 h2 {
@@ -88,14 +91,16 @@ ul {
 a {
   text-decoration: none;
   color: black;
+  font-weight: 400;
 }
 
 #header {
-  background-color: var(--white);
+  background-color: var(--pink-soft);
   position: relative;
   z-index: 3;
   position: fixed;
   width: 100%;
+  box-shadow: 1px 1px 10px gray;
 }
 
 .text__and__logo {
@@ -170,7 +175,7 @@ a {
 }
 
 .hero {
-  max-width: 600px;
+  max-width: 700px;
   height: 500px;
   align-content: center;
   z-index: 1;
@@ -179,12 +184,18 @@ a {
 
 .hero span {
   color: var(--pink-intense);
+  background-color: hsl(0, 0%, 100%, 40%);
+  border-radius: 10px;
+  padding-inline: 18px;
 }
 .backgroundVideo{
   display:none;
 }
 
 @media (min-width: 600px) {
+  h1 {
+    font-size: 4.8rem;
+  }
   .logo {
     position: static;
     top: 0px;
@@ -210,7 +221,17 @@ a {
     text-transform: uppercase;
   }
   #section__nav__text a:hover {
-    color: var(--pink-mid);
+    color: var(--white);
+  }
+  .backgroundVideo{
+    position:absolute;
+    z-index:0;
+    display:block;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
   }
   .backgroundVideo{
     position:absolute;
@@ -224,9 +245,18 @@ a {
   }
 }
 
+/* desktop */
 @media (min-width: 1000px) {
+  h1 {
+    font-size: 6.4rem;
+    margin-inline: 200px;
+    min-width: 600px;
+  }
+  .hero {
+    height: 900px;
+  }
   .text__and__logo {
-    margin-inline: 48px;
+    margin-inline: 100px;
     margin-block: 48px;
   }
   #section__nav__text a {
