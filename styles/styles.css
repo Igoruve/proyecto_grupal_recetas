@@ -50,7 +50,7 @@ body {
 }
 
 main {
-  background-color: var(--pink-soft);
+  background-color: var(--white);
 }
 
 h1 {
@@ -90,17 +90,16 @@ ul {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--pink-intense);
   font-weight: 400;
 }
 
 #header {
-  background-color: var(--pink-soft);
+  background-color: var(--white);
   position: relative;
   z-index: 3;
   position: fixed;
   width: 100%;
-  box-shadow: 1px 1px 10px gray;
 }
 
 .text__and__logo {
@@ -174,7 +173,7 @@ a {
   left: 24px;
 }
 
-.hero {
+#hero {
   max-width: 700px;
   height: 500px;
   align-content: center;
@@ -182,9 +181,9 @@ a {
   position: relative;
 }
 
-.hero span {
+#hero span {
   color: var(--pink-intense);
-  background-color: hsl(0, 0%, 100%, 75%);
+  background-color: hsl(0, 0%, 100%, 70%);
   border-radius: 10px;
   padding-inline: 18px;
 }
@@ -222,7 +221,7 @@ a {
     text-transform: uppercase;
   }
   #section__nav__text a:hover {
-    color: var(--white);
+    color: black;
   }
   .backgroundVideo{
     position:absolute;
@@ -253,12 +252,11 @@ a {
     margin-inline: 200px;
     min-width: 600px;
   }
-  .hero {
+  #hero {
     height: 900px;
   }
   .text__and__logo {
     margin-inline: 100px;
-    margin-block: 48px;
   }
   #section__nav__text a {
     margin-left: 48px;
