@@ -22,6 +22,11 @@ const randomButton = document.getElementById('randomButton');
 const resultsContainer = document.getElementById('results');
 const extendedView = document.getElementById('extendedView');
 
+const resultsTab = document.getElementById("resultsTab");
+const detailsTab = document.getElementById("detailsTab");
+const resultsView = document.getElementById("results");
+const detailedView = document.getElementById("extendedView");
+
 // Form EventListener
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -45,6 +50,8 @@ document.addEventListener('cardSelected', async (e) => {
     const extendedCard = new CardExtended(mealData);
     extendedView.innerHTML = ''; // cleaner
     extendedView.appendChild(extendedCard.render());
+    detailsTab.click();
+    console.log("Huh");
   } else {
     extendedView.innerHTML = '<p>No se encontró la receta.</p>';
   }
@@ -81,6 +88,20 @@ input.addEventListener('focus', () => {
 input.addEventListener('blur', () => {
   document.body.classList.remove('dimmed');
 });
+
+//Result selectors
+function viewToggler(viewToShow, viewToHide) {
+  return function() {
+    if (viewToShow.classList.contains('resultHidden')) {
+      viewToShow.classList.remove('resultHidden');
+    }
+    if (!viewToHide.classList.contains('resultHidden')) {
+      viewToHide.classList.add('resultHidden');
+    }
+  };
+}
+detailsTab.addEventListener('click', viewToggler(detailedView, resultsView));
+resultsTab.addEventListener('click', viewToggler(resultsView, detailedView));
 
 /*class Receta{}              //Abstracta, de esta no se monta, lista los atributos y métodos a implementar
       

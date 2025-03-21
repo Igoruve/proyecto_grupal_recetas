@@ -56,7 +56,7 @@
             <form id="searchForm">
               <p id="inputContainer">
                 <span class="input">
-                  <input type="text" placeholder="Search for a recipe...">
+                  <input id="searchInput" type="text" placeholder="Search for a recipe...">
                   <span id="inputTextDeco"></span>	
                 </span>
               </p>
@@ -68,13 +68,18 @@
     <section id="randomRecipe">
       <button id="randomButton">Discover our suggestions</button>
     </section>
-
-    <section id="results"></section>
-    <section id="extendedView"></section>
+    <section id="resultsWrapper">
+      <section id="tabber">
+        <button id="resultsTab">Resultados</button>
+        <button id="detailsTab">Detalles</button>
+      </section>
+      <section id="results"></section>
+      <section id="extendedView" class="resultHidden"></section>
+    </section>
     </main>
   <footer></footer>
-  <script type="module" src="./scripts/index.js"></script>
+  <script type="module" src="scripts/index.js"></script>
   <script src="scripts/navbar.js"></script>
-  <script src="./scripts/footer.js"></script>
+  <script src="scripts/footer.js"></script>
 </body>
 </html>
