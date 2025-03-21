@@ -250,27 +250,16 @@ a {
   header {
     box-shadow: 0px 1px 10px 10px hsla(0, 0%, 62%, 0.3);
   }
-
-  .backgroundVideo {
-    position: absolute;
-    z-index: 0;
-    display: block;
-    -webkit-filter: blur(15px);
-    -moz-filter: blur(15px);
-    -o-filter: blur(15px);
-    -ms-filter: blur(15px);
-    filter: blur(15px);
-  }
-  .backgroundVideo {
-    position: absolute;
-    z-index: 0;
-    display: block;
-    -webkit-filter: blur(15px);
-    -moz-filter: blur(15px);
-    -o-filter: blur(15px);
-    -ms-filter: blur(15px);
-    filter: blur(15px);
-  }
+.backgroundVideo {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+}
 }
 
 /* desktop */
@@ -359,8 +348,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     padding: 10px;
-  }
-
+}
   .form-inputs {
     margin-left: 120px;
     margin-right: 120px;
@@ -370,4 +358,5 @@ footer {
     grid-column-start: 1;
     grid-column-end: 3;
   }
-}
+
+
