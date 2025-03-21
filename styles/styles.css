@@ -341,6 +341,17 @@ footer {
   border-style: none;
 }
 
+.form-inputs button {
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.form-inputs button:hover {
+  cursor: pointer;
+  background-color: var(--pink-mid);
+  transition: .5s ease-in-out;
+}
+
 /* footer styles for bigger screens */
 @media screen and (min-width: 1024px) {
   footer {
@@ -361,7 +372,4 @@ footer {
     grid-column-start: 1;
     grid-column-end: 3;
   } 
-
-
-
 }
