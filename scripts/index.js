@@ -31,7 +31,6 @@ const detailedView = document.getElementById("extendedView");
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const query = input.value.trim();
-
   if (query === '') {
     alert('Type something...');
     return;
@@ -51,7 +50,6 @@ document.addEventListener('cardSelected', async (e) => {
     extendedView.innerHTML = ''; // cleaner
     extendedView.appendChild(extendedCard.render());
     detailsTab.click();
-    console.log("Huh");
   } else {
     extendedView.innerHTML = '<p>No se encontró la receta.</p>';
   }
@@ -65,6 +63,7 @@ randomButton.addEventListener('click', async () => {
     const extendedCard = new CardExtended(mealData);
     extendedView.innerHTML = '';
     extendedView.appendChild(extendedCard.render());
+    detailsTab.click();
   }
 });
 randomButton.click();
@@ -79,6 +78,7 @@ input.addEventListener('input', debounce(async () => {
 
   const meals = await fetchMeals(query);
   renderCards(meals, resultsContainer);
+  resultsTab.click();
 }, 500));
 
 // Input focus visual (optional)
