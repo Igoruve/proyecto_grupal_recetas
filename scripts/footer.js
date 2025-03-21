@@ -5,28 +5,39 @@ function generateFooter() {
     // info_footer
     const divInfoFooter = document.createElement("div");
     divInfoFooter.className = "info_footer";
-    const infoFooterList = document.createElement("ul");
-    const companyName = document.createElement("h2");
-    const home = document.createElement("li");
-    const aboutUs = document.createElement("li");
-    const recipes = document.createElement("li");
 
-    companyName.innerText = "Tu Co-mealDa";
-    home.innerText = "Home";
-    aboutUs.innerText = "About us";
-    recipes.innerText = "Recipes";
+    const infoFooterList = document.createElement("ul");
+    const info = document.createElement("h2");
+    info.innerText = "Tu Comeal-da";
+    const home = document.createElement("li");
+    const homeLink = document.createElement("a");
+    homeLink.href = "index.html#home";
+    homeLink.innerText = "Home";
+    home.appendChild(homeLink);
+
+    const recipes = document.createElement("li");
+    const recipesLink = document.createElement("a");
+    recipesLink.href = "index.html#home";
+    recipesLink.innerText = "Recipes";
+    recipes.appendChild(recipesLink);
+
+    const aboutUs = document.createElement("li");
+    const aboutUsLink = document.createElement("a");
+    aboutUsLink.href = "index.html#home";
+    aboutUsLink.innerText = "About Us";
+    aboutUs.appendChild(aboutUsLink);
 
     divInfoFooter.append(infoFooterList);
-    infoFooterList.append(companyName, home, recipes, aboutUs);
+    infoFooterList.append(info, home, recipes, aboutUs);
     footer.appendChild(divInfoFooter);
 
     // contact_footer
     const divContactFooter = document.createElement("div");
     divContactFooter.className = "contact_footer";
+
     const contactFooterList = document.createElement("ul");
     const contact = document.createElement("h2");
     contact.innerText = "Contact";
-
     const facebook = document.createElement("li");
     const facebookLink = document.createElement("a");
     facebookLink.href = "https://facebook.com";
@@ -55,6 +66,7 @@ function generateFooter() {
     // form_footer --------------------------------------------------
     const divFormFooter = document.createElement("div");
     divFormFooter.className = "form_footer";
+    divContactFooter.id= "contact"
 
     // // creación de form
     const formElement = document.createElement("form");
