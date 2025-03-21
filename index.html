@@ -1,21 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comeal-da</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-    <header>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="text__and__logo">
+        <a href="#">
+          <svg
+            class="logo"
+            xmlns="http://www.w3.org/2000/svg"
+            height="48px"
+            viewBox="0 -960 960 960"
+            width="48px"
+            fill="#FF6C6C"
+          >
+            <path
+              d="m165-120-42-42 420-420q-22-48-10-99.5t57-96.5q45-44 109-56.5T804-806q42 42 28.5 105T772-590q-41 42-91.5 55t-94.5-6l-67 67 312 312-42 42-312-312-312 312Zm125-351L171-590q-51-51-53-121t46-124l245 245-119 119Z"
+            />
+          </svg>
+        </a>
+        <div id="section__nav__text">
+          <a href="">Home</a>
+          <a href="">Contact</a>
+        </div>
+      </div>
+      <div id="section__nav__menu">
+        <svg
+          class="hamburger"
+          width="50"
+          height="50"
+          viewBox="0 0 50 50"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g class="lines">
+            <line class="top" x1="10" y1="15" x2="40" y2="15" />
+            <line class="middle" x1="10" y1="25" x2="40" y2="25" />
+            <line class="bottom" x1="10" y1="35" x2="40" y2="35" />
+          </g>
+        </svg>
+      </div>
     </header>
     <main>
-
-    </main>
-    <footer>
-        
-    </footer>
+      <div class="heroTextWrapper">
+        <video autoplay muted loop class="backgroundVideo">
+          <source src="assets/heroVideoPancake.mp4" type="video/mp4" />
+        </video>
+        <section id="hero">
+            <h1>Disfruta del <span>placer</span> de comer</h1>
+        </section>
+        <section id="cards">
+        </section>
+      </div>
+      </main>
+    <footer></footer>
+    <script src="scripts/navbar.js"></script>
     <script src="./scripts/footer.js"></script>
-</body>
+  </body>
 </html>
