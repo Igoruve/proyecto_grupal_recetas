@@ -50,6 +50,7 @@ document.addEventListener('cardSelected', async (e) => {
     extendedView.innerHTML = ''; // cleaner
     extendedView.appendChild(extendedCard.render());
     detailsTab.click();
+    detailsTab.textContent=mealData.strMeal;
   } else {
     extendedView.innerHTML = '<p>No se encontró la receta.</p>';
   }
