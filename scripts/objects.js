@@ -34,6 +34,7 @@ class CardExtended extends Card {
     this.area = mealData.strArea;
     this.category = mealData.strCategory;
     this.ingredients = this.getIngredients(mealData);
+    this.id = mealData.idMeal;
   }
 
   getIngredients(mealData) {
@@ -63,6 +64,7 @@ class CardExtended extends Card {
       </ul>
       <h3>Instrucciones:</h3>
       <p>${this.instructions}</p>
+      <p id="${"favIcon"}">${"Heart"}</p>
     `;
 
     return extendedElement;

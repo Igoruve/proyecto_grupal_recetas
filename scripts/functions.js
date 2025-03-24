@@ -94,3 +94,26 @@ export async function showExtendedCard(mealId) {
     console.error('Error showing details:', error);
   }
 }
+
+//LocalStorage utils
+const getFavArray = () => {
+  if(JSON.parse(localStorage.getItem("favs"))==null){
+    return [];
+  }else{
+    return JSON.parse(localStorage.getItem("favs"));
+  }
+}
+
+const addToFavArray = (element) => {
+  const currentArray = getFavArray();
+  currentArray.push(element);
+  localStorage.setItem("favs", JSON.stringify(currentArray));
+}
+
+const removeFromFavArray = (element) => {
+  const currentArray = getFavArray();
+  const newArray = currentArray.filter((id)=>{
+    return id!=element
+  })
+  return newArray;
+}
