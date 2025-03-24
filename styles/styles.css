@@ -19,19 +19,19 @@ Box shadow 1px 1px 5px gray
 
     */
 
-    .input {
+    #inputContainer>.input {
       position: relative;
       font-size: 1.5em;
       background: linear-gradient(220.55deg, #FF9494  0%, #FF6C6C 100%);
-      padding: 3px !important;
-      border-radius: 9999em !important;
+      padding: 3px;
+      border-radius: 9999em;
       float:left;
     }
 
     #inputContainer>span>input{
       height:1.5em;
-      font-size:1.5em;
-      border-radius:9999em !important;
+      font-size:1.0em;
+      border-radius:9999em;
     }
 
     #inputContainer{
@@ -54,13 +54,13 @@ Box shadow 1px 1px 5px gray
       transform: scale(1);
     }
     
-    #inputTextDeco {
+    #inputContainer>span>#inputTextDeco {
       transform: scale(.993, .94);
       transition: transform .5s, opacity .25s;
       opacity: 0;
       position: absolute;
       z-index: 0;
-      border-radius:9999em !important;
+      border-radius:9999em;
       margin: 4px;
       left: 0;
       top: 0;
@@ -68,7 +68,7 @@ Box shadow 1px 1px 5px gray
       bottom: 0;
       border-radius: inherit;
       pointer-events: none;
-      box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #FF6C6C, -3px 3px 30px #FF9494 !important;
+      box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #FF6C6C, -3px 3px 30px #FF9494;
     }
     
     input {
@@ -289,7 +289,7 @@ a {
 }
 
 .heroTextWrapper{
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
   width: 100%;
   position:relative;
@@ -524,6 +524,17 @@ footer {
   border-style: none;
 }
 
+.form-inputs button {
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.form-inputs button:hover {
+  cursor: pointer;
+  background-color: var(--pink-mid);
+  transition: .5s ease-in-out;
+}
+
 /* footer styles for bigger screens */
 @media screen and (min-width: 1024px) {
   footer {
@@ -544,7 +555,6 @@ footer {
     grid-column-end: 3;
   }
 }
-
 
 a {
   text-decoration: none;
