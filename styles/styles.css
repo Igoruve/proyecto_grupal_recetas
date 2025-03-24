@@ -289,7 +289,7 @@ a {
 }
 
 .heroTextWrapper{
-  height: 80vh;
+  height: 100vh;
   overflow: hidden;
   width: 100%;
   position:relative;
@@ -321,14 +321,6 @@ a {
 #tabber{
   max-width:1200px;
   margin:0 auto;
-}
-
-#casa{
-  width:100%;
-}
-
-#cosa{
-  width:100%;
 }
 
 #results.resultHidden,
