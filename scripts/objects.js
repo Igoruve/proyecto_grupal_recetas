@@ -1,3 +1,5 @@
+import { checkIfInFavArray } from './localStorageUtils';
+
 // Card (Object Master Class, Reduced Card Version)
 class Card {
   constructor({ idMeal, strMeal, strMealThumb }) {
@@ -52,6 +54,13 @@ class CardExtended extends Card {
   render() {
     const extendedElement = document.createElement('div');
     extendedElement.classList.add('card-extended');
+    const favoriteButton = document.createElement("button");
+    favoriteButton.classList.add("favorite-btn");
+    favoriteButton.textContent = checkIfInFavArray(this.id) ? "★ Remove from Favorites" : "☆ Add to Favorites";
+    if (checkIfInFavArray(this.id)) favoriteButton.classList.add("favorited");
+
+    // Add event listener to toggle favorite state
+    favoriteButton.addEventListener("click", () => this.toggleFavorite(favoriteButton));
 
     extendedElement.innerHTML = `
       <img src="${this.thumbnail}" alt="${this.name}" />
@@ -64,7 +73,7 @@ class CardExtended extends Card {
       </ul>
       <h3>Instrucciones:</h3>
       <p>${this.instructions}</p>
-      <p id="${"favIcon"}">${"Heart"}</p>
+
     `;
 
     return extendedElement;
