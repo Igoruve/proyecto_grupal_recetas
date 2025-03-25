@@ -398,6 +398,7 @@ input::placeholder {
   cursor: pointer;
   transition: all 150ms ease-in-out;
   margin-bottom: 16px;
+  min-width: 100px;
 }
 
 #randomButton:hover,
