@@ -19,82 +19,6 @@ Box shadow 1px 1px 5px gray
 
     */
 
-    #inputContainer>.input {
-      position: relative;
-      font-size: 1.5em;
-      background: linear-gradient(220.55deg, #FF9494  0%, #FF6C6C 100%);
-      padding: 3px;
-      border-radius: 9999em;
-      float:left;
-    }
-
-    #inputContainer>span>input{
-      height:1.5em;
-      font-size:1.0em;
-      border-radius:9999em;
-    }
-
-    #inputContainer{
-      width:100%;
-    }
-
-    .input *:not(#inputTextDeco) {
-      position: relative;
-      display: inherit;
-      border-radius: inherit;
-      margin: 0;
-      border: none;
-      outline: none;
-      padding: 0 .325em;
-      z-index: 1;
-    }
-    
-    .input *:not(#inputTextDeco):focus + #inputTextDeco {
-      opacity: 1;
-      transform: scale(1);
-    }
-    
-    #inputContainer>span>#inputTextDeco {
-      transform: scale(.993, .94);
-      transition: transform .5s, opacity .25s;
-      opacity: 0;
-      position: absolute;
-      z-index: 0;
-      border-radius:9999em;
-      margin: 4px;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: inherit;
-      pointer-events: none;
-      box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #FF6C6C, -3px 3px 30px #FF9494;
-    }
-    
-    input {
-      font-family: inherit;
-      line-height: inherit;
-      color: #2e3750;
-      min-width: 12em;
-    } 
-
-    
-    /* 
-
-
-
-
-
-
-
-
-
-
-
-*/
-
-
-
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -130,20 +54,22 @@ main {
 }
 
 h1 {
+  margin-top: 148px;
+  margin-bottom: 48px;
   font-size: 3.6rem;
   font-weight: 900;
   line-height: 1.3;
   letter-spacing: 0.5;
   margin-inline: 48px;
-  margin-block: 48px;
   text-transform: uppercase;
-  color: var(--white);
+  color: black;
 }
 
 h2 {
   font-size: 2.6rem;
   font-weight: 400;
   line-height: 1.5;
+  margin-bottom: 32px;
 }
 
 h3 {
@@ -159,39 +85,15 @@ a {
   line-height: 1.5;
 }
 
-h1 {
-  font-size: 3.6rem;
+a {
+  text-decoration: none;
+  color: var(--pink-intense);
   font-weight: 400;
-  line-height: 1.3;
-}
-
-h2 {
-  font-size: 2.6rem;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-h3 {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-p {
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 1.5;
 }
 
 ol,
 ul {
   list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: var(--pink-intense);
-  font-weight: 400;
 }
 
 #header {
@@ -200,6 +102,12 @@ a {
   z-index: 100;
   position: fixed;
   width: 100%;
+}
+
+#container_navbar {
+  height: 100px;
+  background-color: white;
+  box-shadow: 0px 7px 5px -2px hsl(0, 0%, 75%);
 }
 
 .text__and__logo {
@@ -258,9 +166,9 @@ a {
   text-transform: uppercase;
   padding: 24px;
   box-shadow: 0px 7px 5px -2px hsl(0, 0%, 75%);
-  border-radius: 8px;
   opacity: 1;
   transform: translateY(0);
+  background-color: white;
 }
 #section__nav__text.show a {
   font-size: 2rem;
@@ -275,29 +183,94 @@ a {
 
 #hero {
   max-width: 700px;
-  height: 500px;
   align-content: center;
   z-index: 1;
   position: relative;
 }
 
-#hero span {
-  color: var(--pink-intense);
-  background-color: hsl(0, 0%, 100%, 70%);
-  border-radius: 10px;
-  padding-inline: 18px;
+#hero p {
+  margin-inline: 48px;
+  margin-bottom: 48px;
 }
 
-.heroTextWrapper{
-  height: 90vh;
+#hero span {
+  color: var(--pink-intense);
+}
+
+.heroTextWrapper {
   overflow: hidden;
   width: 100%;
-  position:relative;
+  position: relative;
 }
 
 .backgroundVideo {
   display: none;
   max-width: 100vw;
+}
+
+#inputContainer > .input {
+  position: relative;
+  font-size: 1.5em;
+  background: linear-gradient(220.55deg, #ff9494 0%, #ff6c6c 100%);
+  padding: 3px;
+  border-radius: 9999em;
+  float: left;
+}
+
+#inputContainer > span > input {
+  height: 1.5em;
+  font-size: 1em;
+  border-radius: 9999em;
+}
+
+#inputContainer {
+  width: 100%;
+}
+
+.input *:not(#inputTextDeco) {
+  position: relative;
+  display: inherit;
+  border-radius: inherit;
+  margin: 0;
+  border: none;
+  outline: none;
+  padding: 0 0.325em;
+  z-index: 1;
+}
+
+.input *:not(#inputTextDeco):focus + #inputTextDeco {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#inputContainer > span > #inputTextDeco {
+  transform: scale(0.993, 0.94);
+  transition: transform 0.5s, opacity 0.25s;
+  opacity: 0;
+  position: absolute;
+  z-index: 0;
+  border-radius: 9999em;
+  margin: 4px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #ff6c6c,
+    -3px 3px 30px #ff9494;
+}
+
+input {
+  font-family: inherit;
+  line-height: inherit;
+  color: #2e3750;
+  min-width: 12em;
+}
+
+input::placeholder {
+  font-size: 1.6rem;
+  padding-inline: 12px;
 }
 
 #searchForm {
@@ -307,55 +280,57 @@ a {
   margin-bottom: 1rem;
 }
 
-#searchBar{
-  width:100%;
-  z-index:20;
-  position:relative;
-  margin-inline:200px;
+#searchBar {
+  width: 100%;
+  z-index: 20;
+  position: relative;
+  margin-bottom: 32px;
 }
 
-#resultsWrapper{
-  width:100%;
+#resultsWrapper {
+  width: 100%;
+  background: linear-gradient(180deg, #ffd2d2 0%, #ff6c6c 100%);
+  padding-block: 24px;
+  padding-inline: 42px;
 }
 
-#tabber{
-  max-width:1200px;
-  margin:0 auto;
-}
-
-#casa{
-  width:100%;
-}
-
-#cosa{
-  width:100%;
+#tabber {
+  margin-inline: 42px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #results.resultHidden,
-#extendedView.resultHidden{
-  display:none;
+#extendedView.resultHidden {
+  display: none;
 }
-
 
 #results {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
+  gap: 16px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .card {
-  border: 1px solid #ccc;
+  border-radius: 10px;
   padding: 1rem;
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s;
+
+  background-color: white;
+  transition: all 150ms ease-in-out;
 }
 
-.card img {
+.card img,
+.card-extended img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
+  margin-bottom: 24px;
 }
 
 .card:hover {
@@ -364,46 +339,110 @@ a {
 
 .card-extended {
   margin-top: 2rem;
-  padding: 1rem;
-  border: 2px solid #333;
+  padding: 2rem;
+  border-radius: 10px;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: white;
+  box-shadow: 1px 1px 5px hsl(0, 0%, 75%);
 }
 
-.card-extended img {
-  width: 100%;
-  height: auto;
+.card-extended h2 {
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
-.dimmed::after{
-  content:"";
-  position: fixed;  /* Covers the entire screen */
+.card-extended h3 {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.dimmed::after {
+  content: "";
+  position: fixed; /* Covers the entire screen */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index:10;
+  z-index: 10;
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
   pointer-events: none; /* Ensures clicks go through */
 }
 
 #searchInput:focus {
   outline: none;
-  border: 2px solid #FF6347;
+  border: 2px solid #ff6347;
   transform: scale(1.1);
   transition: all 0.3s ease;
+}
+
+#randomRecipe {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#randomButton {
+  background-color: white;
+  border: none;
+  padding-inline: 12px;
+  padding-block: 8px;
+  border-radius: 99999px;
+  font-family: "Nunito";
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+#randomButton:hover {
+  scale: 1.1;
 }
 
 #randomButton:focus {
   outline: none;
-  border: 2px solid #FF6347;
+  border: 2px solid #ff6347;
   transform: scale(1.1);
   transition: all 0.3s ease;
 }
 
+#resultsTab {
+  background-color: white;
+  border: none;
+  padding-inline: 12px;
+  padding-block: 8px;
+  border-radius: 99999px;
+  font-family: "Nunito";
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+#resultsTab:hover {
+  scale: 1.1;
+}
+
+#resultsTab:focus {
+  border: 2px solid #ff6347;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+#detailsTab {
+  display: none;
+}
+
 @media (min-width: 600px) {
   h1 {
+    margin-top: 200px;
     font-size: 4.8rem;
+    color: white;
+    margin-bottom: 32px;
+    text-shadow: 1px 1px 5px gray;
+  }
+  #hero p {
+    margin-left: 48px;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 1px 1px 5px gray
   }
   .logo {
     position: static;
@@ -426,7 +465,7 @@ a {
   }
   #section__nav__text a {
     margin-left: 24px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
   }
   #section__nav__text a:hover {
@@ -435,16 +474,26 @@ a {
   header {
     box-shadow: 0px 1px 10px 10px hsla(0, 0%, 62%, 0.3);
   }
-.backgroundVideo {
-  position: absolute;
-  z-index: 0;
-  display: block;
-  -webkit-filter: blur(15px);
-  -moz-filter: blur(15px);
-  -o-filter: blur(15px);
-  -ms-filter: blur(15px);
-  filter: blur(15px);
-}
+  .backgroundVideo {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+  }
+
+  .card-extended {
+    max-width: 50%;
+  }
+  #tabber {
+    margin-inline: 42px;
+  }
+  #resultsWrapper {
+    padding-inline: 42px;
+  }
 }
 
 /* desktop */
@@ -454,20 +503,30 @@ a {
     margin-inline: 200px;
     min-width: 600px;
   }
-  #hero {
-    height: 900px;
+  #hero p {
+    min-width: 600px;
+    margin-left: 200px;
+    color: white;
+    font-size: 2.4rem;
   }
   .text__and__logo {
     margin-inline: 100px;
   }
   #section__nav__text a {
     margin-left: 48px;
-    font-size: 2.8rem;
+    font-size: 2rem;
     text-transform: uppercase;
   }
   .logo {
     width: 64px;
     height: 64px;
+  }
+
+  #searchBar {
+    margin-left: 80px;
+  }
+  #resultsWrapper {
+    padding-inline: 100px;
   }
 }
 
@@ -502,6 +561,7 @@ footer {
   border-radius: 10px;
   margin: 2dvw;
   font-size: 1.8rem;
+  font-family: "Nunito";
 }
 
 .form-inputs {
@@ -520,19 +580,29 @@ footer {
   margin: 1%;
   padding: 12px 16px;
   border-radius: 10px;
-  font-size: 1.8rem;
   border-style: none;
+}
+
+.form-inputs input,
+.form-inputs button{
+  font-size: 1.8rem;
 }
 
 .form-inputs button {
   cursor: pointer;
-  transition: .5s ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 
 .form-inputs button:hover {
   cursor: pointer;
   background-color: var(--pink-mid);
-  transition: .5s ease-in-out;
+  color: white;
+}
+
+.textArea::placeholder {
+  font-family: "Nunito";
+  font-size: 1.6rem;
+  padding: 10px 10px;
 }
 
 /* footer styles for bigger screens */
@@ -544,254 +614,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     padding: 10px;
-}
-  .form-inputs {
-    margin-left: 120px;
-    margin-right: 120px;
   }
-
-  .form_footer {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-}
-
-a {
-  text-decoration: none;
-  color: var(--pink-intense);
-  font-weight: 400;
-}
-
-#header {
-  background-color: var(--white);
-  position: relative;
-  z-index: 200;
-  position: fixed;
-  width: 100%;
-}
-
-.text__and__logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-#section__nav__text {
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(-100px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-}
-
-#section__nav__text a {
-  transition: color 150ms ease-in-out;
-}
-
-#section__nav__menu {
-  position: absolute;
-  right: 24px;
-  top: 24px;
-}
-
-.hamburger {
-  cursor: pointer;
-}
-
-.lines line {
-  stroke: var(--pink-intense);
-  stroke-width: 4;
-  stroke-linecap: round;
-}
-
-.hamburger.active .top {
-  transform: translateY(5px) rotate(45deg);
-  transform-origin: 50% 50%;
-}
-
-.hamburger.active .middle {
-  opacity: 0;
-}
-
-.hamburger.active .bottom {
-  transform: translateY(-10px) rotate(-45deg);
-  transform-origin: 50% 50%;
-}
-
-#section__nav__text.show {
-  margin-top: 100px;
-  width: 100%;
-  visibility: visible;
-  display: flex;
-  flex-direction: column;
-  text-transform: uppercase;
-  padding: 24px;
-  box-shadow: 0px 7px 5px -2px hsl(0, 0%, 75%);
-  border-radius: 8px;
-  opacity: 1;
-  transform: translateY(0);
-}
-#section__nav__text.show a {
-  font-size: 2rem;
-  padding-bottom: 24px;
-}
-
-.logo {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-}
-
-#hero {
-  max-width: 33%;
-  align-content: center;
-  z-index: 11;
-  position: relative;
-}
-
-#hero span {
-  color: var(--pink-intense);
-  background-color: hsl(0, 0%, 100%, 70%);
-  border-radius: 10px;
-  padding-inline: 18px;
-}
-.backgroundVideo {
-  display: none;
-  max-width: 100vw;
-}
-
-@media (min-width: 600px) {
-  h1 {
-    font-size: 4.8rem;
-  }
-  .logo {
-    position: static;
-    top: 0px;
-    left: 0px;
-  }
-  .text__and__logo {
-    margin-inline: 24px;
-    margin-block: 24px;
-  }
-  #section__nav__menu {
-    visibility: hidden;
-  }
-  #section__nav__text {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-    display: flex;
-    justify-content: flex-end;
-  }
-  #section__nav__text a {
-    margin-left: 24px;
-    font-size: 2rem;
-    text-transform: uppercase;
-  }
-  #section__nav__text a:hover {
-    color: black;
-  }
-  header {
-    box-shadow: 0px 1px 10px 10px hsla(0, 0%, 62%, 0.3);
-  }
-.backgroundVideo {
-  position: absolute;
-  z-index: 0;
-  display: block;
-  -webkit-filter: blur(15px);
-  -moz-filter: blur(15px);
-  -o-filter: blur(15px);
-  -ms-filter: blur(15px);
-  filter: blur(15px);
-}
-}
-
-/* desktop */
-@media (min-width: 1000px) {
-  h1 {
-    font-size: 6.4rem;
-    margin-inline: 200px;
-    min-width: 600px;
-  }
-  #hero {
-    height: 900px;
-  }
-  .text__and__logo {
-    margin-inline: 100px;
-  }
-  #section__nav__text a {
-    margin-left: 48px;
-    font-size: 2.8rem;
-    text-transform: uppercase;
-  }
-  .logo {
-    width: 64px;
-    height: 64px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .backgroundVideo {
-    width: 100%;
-  }
-}
-
-/* ------------ */
-/* daniel --- hacer que el footer se quede al final del html*/
-/* ------------ */
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-
-main {
-  flex-grow: 1;
-  align-content: center;
-}
-
-/* styles for footer */
-footer {
-  background-color: var(--pink-soft);
-  padding: 1vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  margin: 2dvw;
-  font-size: 1.8rem;
-}
-
-.form-inputs {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1%;
-}
-
-.form_footer {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-.form-inputs input,
-.form-inputs button,
-.form-inputs textarea {
-  margin: 1%;
-  padding: 12px 16px;
-  border-radius: 10px;
-  font-size: 1.8rem;
-  border-style: none;
-}
-
-/* footer styles for bigger screens */
-@media screen and (min-width: 1024px) {
-  footer {
-    font-size: 2rem;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    padding: 10px;
-}
   .form-inputs {
     margin-left: 120px;
     margin-right: 120px;
