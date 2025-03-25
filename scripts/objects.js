@@ -89,6 +89,9 @@ class CardExtended extends Card {
     const extendedElement = document.createElement('div');
     extendedElement.classList.add('card-extended');
 
+    const buttonsContainer = document.createElement('div');
+    buttonsContainer.classList.add('card-extended-buttons');
+
     const favoriteButton = document.createElement("button");
     favoriteButton.classList.add("favorite-btn");
     favoriteButton.textContent = checkIfInFavArray(this.id) ? "❤️ Remove from Favorites" : "🤍 Add to Favorites";
@@ -108,11 +111,14 @@ class CardExtended extends Card {
       </ul>
       <h3>Instrucciones:</h3>
       <p>${this.instructions}</p>
-      <button class="download-pdf">📄 Descargar Receta</button>
     `;
-
-    extendedElement.querySelector('.download-pdf').addEventListener('click', () => this.generatePDF());
-    extendedElement.appendChild(favoriteButton);
+    buttonsContainer.innerHTML = `
+      <button class="download-pdf">📄 Download Recipe </button>    
+    `
+    buttonsContainer.querySelector('.download-pdf').addEventListener('click', () => this.generatePDF());
+    buttonsContainer.appendChild(favoriteButton);
+    extendedElement.appendChild(buttonsContainer);
+    
     return extendedElement;
   }
 }
