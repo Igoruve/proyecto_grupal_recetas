@@ -368,11 +368,11 @@ a {
   border: 2px solid #333;
   max-width: 1200px;
   margin: 0 auto;
+  overflow:hidden;
 }
 
 .card-extended img {
-  width: 100%;
-  height: auto;
+float:right;
 }
 
 .dimmed::after{

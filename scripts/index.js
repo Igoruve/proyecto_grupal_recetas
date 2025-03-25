@@ -1,3 +1,11 @@
+/*
+class Receta{}              //Abstracta, de esta no se monta, lista los atributos y métodos a implementar
+      
+function addHTML()          //Una funcion que tomara el html resultante de una de las clases
+                            //Y los incrustará en el HTML
+function getInputText()     //Recoger el texto del input
+*/
+import { getFavRecipes } from './localStorageUtils.js';
 import { Card, CardExtended } from './objects.js';
 import {
   fetchMeals,
@@ -13,6 +21,7 @@ const input = document.getElementById('searchInput');
 const randomButton = document.getElementById('randomButton');
 const resultsContainer = document.getElementById('results');
 const extendedView = document.getElementById('extendedView');
+const favButton = document.getElementById('favButton');
 
 const resultsTab = document.getElementById("resultsTab");
 const detailsTab = document.getElementById("detailsTab");
@@ -60,6 +69,14 @@ randomButton.addEventListener('click', async () => {
   }
 });
 randomButton.click();
+
+// Fav recipes
+favButton.addEventListener('click', async () =>{
+  const mealData = await getFavRecipes();
+  renderCards(mealData, resultsContainer);
+  resultsTab.click();
+});
+
 // Live Search (optional, uncomment to try)
 input.addEventListener('input', debounce(async () => {
   const query = input.value.trim();
