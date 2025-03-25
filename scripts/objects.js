@@ -1,4 +1,4 @@
-import { checkIfInFavArray } from './localStorageUtils';
+import { checkIfInFavArray } from './localStorageUtils.js'
 
 // Card (Object Master Class, Reduced Card Version)
 class Card {
