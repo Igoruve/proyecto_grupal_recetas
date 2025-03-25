@@ -66,13 +66,13 @@ class CardExtended extends Card {
     extendedElement.innerHTML = `
       <img src="${this.thumbnail}" alt="${this.name}" />
       <h2>${this.name}</h2>
-      <p><strong>Área:</strong> ${this.area}</p>
-      <p><strong>Categoría:</strong> ${this.category}</p>
-      <h3>Ingredientes:</h3>
+      <p><strong>Type of food:</strong> ${this.area}</p>
+      <p><strong>Category:</strong> ${this.category}</p>
+      <h3>Ingredients:</h3>
       <ul>
-        ${this.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+        ${this.ingredients.map(ing => `<li><p>${ing}</p></li>`).join('')}
       </ul>
-      <h3>Instrucciones:</h3>
+      <h3>Instructions:</h3>
       <p>${this.instructions}</p>
 
     `;

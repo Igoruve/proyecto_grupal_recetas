@@ -88,7 +88,8 @@ function generateFooter() {
 
     const textArea = document.createElement("textarea")
     textArea.rows = 5
-    textArea.placeholder = "Your text here"
+    textArea.placeholder="Your message"
+    textArea.className="textArea"
 
     const submitButton = document.createElement("button");
     submitButton.type = "submit";
