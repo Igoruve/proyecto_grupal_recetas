@@ -3,7 +3,7 @@ import { Card, CardExtended } from './objects.js';
 // FIRST STEPS: TEST API CALL TO GET AN IDEA OF THE RESPONSE.
 const searchMealByName = async (mealName) => {
     try {
-      const response = await fetch(lexemeUrl + `search.php?s=${mealName}`);
+      const response = await fetch(lexemeUrl + `search.php?s=${mealName}`); //const response = await fetch(lexemeUrl + `search.php?s=${encodeURIComponent(mealName)}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }

@@ -1,11 +1,3 @@
-/*
-class Receta{}              //Abstracta, de esta no se monta, lista los atributos y métodos a implementar
-      
-function addHTML()          //Una funcion que tomara el html resultante de una de las clases
-                            //Y los incrustará en el HTML
-function getInputText()     //Recoger el texto del input
-*/
-
 import { Card, CardExtended } from './objects.js';
 import {
   fetchMeals,
