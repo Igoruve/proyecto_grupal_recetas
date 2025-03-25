@@ -57,7 +57,7 @@ class CardExtended extends Card {
 
     const favoriteButton = document.createElement("button");
     favoriteButton.classList.add("favorite-btn");
-    favoriteButton.textContent = checkIfInFavArray(this.id) ? "★ Remove from Favorites" : "☆ Add to Favorites";
+    favoriteButton.textContent = checkIfInFavArray(this.id) ? "❤️ Remove from Favorites" : "🤍 Add to Favorites";
     if (checkIfInFavArray(this.id)) favoriteButton.classList.add("favorited");
 
     // Add event listener to toggle favorite state
