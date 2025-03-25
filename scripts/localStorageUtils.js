@@ -24,3 +24,14 @@ export const getFavArray = () => {
     const currentArray = getFavArray();
     return (currentArray.indexOf(element) != -1)
   }
+
+  export const toggleFavorite = (id, button) => {
+    console.log("Happwns");
+    if (checkIfInFavArray(id)) {
+      removeFromFavArray(id);
+    } else {
+      addToFavArray(id);
+    }
+    button.textContent = checkIfInFavArray(id) ? "★ Remove from Favorites" : "☆ Add to Favorites";
+    button.classList.toggle("favorited", checkIfInFavArray(id));
+  }

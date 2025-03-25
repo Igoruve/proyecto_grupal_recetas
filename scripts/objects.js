@@ -1,4 +1,4 @@
-import { checkIfInFavArray } from './localStorageUtils.js'
+import { checkIfInFavArray, toggleFavorite } from './localStorageUtils.js'
 
 // Card (Object Master Class, Reduced Card Version)
 class Card {
@@ -54,13 +54,14 @@ class CardExtended extends Card {
   render() {
     const extendedElement = document.createElement('div');
     extendedElement.classList.add('card-extended');
+
     const favoriteButton = document.createElement("button");
     favoriteButton.classList.add("favorite-btn");
     favoriteButton.textContent = checkIfInFavArray(this.id) ? "★ Remove from Favorites" : "☆ Add to Favorites";
     if (checkIfInFavArray(this.id)) favoriteButton.classList.add("favorited");
 
     // Add event listener to toggle favorite state
-    favoriteButton.addEventListener("click", () => this.toggleFavorite(favoriteButton));
+    favoriteButton.addEventListener("click", () => toggleFavorite(this.id, favoriteButton));
 
     extendedElement.innerHTML = `
       <img src="${this.thumbnail}" alt="${this.name}" />
@@ -76,6 +77,7 @@ class CardExtended extends Card {
 
     `;
 
+    extendedElement.appendChild(favoriteButton);
     return extendedElement;
   }
 }
