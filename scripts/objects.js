@@ -1,3 +1,5 @@
+import { checkIfInFavArray, toggleFavorite } from './localStorageUtils.js'
+
 // Card (Object Master Class, Reduced Card Version)
 class Card {
   constructor({ idMeal, strMeal, strMealThumb }) {
@@ -35,6 +37,7 @@ class CardExtended extends Card {
     this.area = mealData.strArea;
     this.category = mealData.strCategory;
     this.ingredients = this.getIngredients(mealData);
+    this.id = mealData.idMeal;
   }
 
   getIngredients(mealData) {
@@ -136,19 +139,29 @@ export { Card, CardExtended };
     const extendedElement = document.createElement('div');
     extendedElement.classList.add('card-extended');
 
+    const favoriteButton = document.createElement("button");
+    favoriteButton.classList.add("favorite-btn");
+    favoriteButton.textContent = checkIfInFavArray(this.id) ? "❤️ Remove from Favorites" : "🤍 Add to Favorites";
+    if (checkIfInFavArray(this.id)) favoriteButton.classList.add("favorited");
+
+    // Add event listener to toggle favorite state
+    favoriteButton.addEventListener("click", () => toggleFavorite(this.id, favoriteButton));
+
     extendedElement.innerHTML = `
       <img src="${this.thumbnail}" alt="${this.name}" />
       <h2>${this.name}</h2>
-      <p><strong>Área:</strong> ${this.area}</p>
-      <p><strong>Categoría:</strong> ${this.category}</p>
-      <h3>Ingredientes:</h3>
+      <p><strong>Type of food:</strong> ${this.area}</p>
+      <p><strong>Category:</strong> ${this.category}</p>
+      <h3>Ingredients:</h3>
       <ul>
-        ${this.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+        ${this.ingredients.map(ing => `<li><p>${ing}</p></li>`).join('')}
       </ul>
-      <h3>Instrucciones:</h3>
+      <h3>Instructions:</h3>
       <p>${this.instructions}</p>
+
     `;
 
+    extendedElement.appendChild(favoriteButton);
     return extendedElement;
   }
 }

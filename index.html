@@ -1,83 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comeal-da</title>
 
-    <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800;900&display=swap" rel="stylesheet"/>
-</head>
-<body>
-  <header id="header">
-    <div class="text__and__logo">
-      <a href="#">
-
-        <svg
-          class="logo"
-          xmlns="http://www.w3.org/2000/svg"
-          height="48px"
-          viewBox="0 -960 960 960"
-          width="48px"
-          fill="#FF6C6C"
-        >
-          <path
-            d="m165-120-42-42 420-420q-22-48-10-99.5t57-96.5q45-44 109-56.5T804-806q42 42 28.5 105T772-590q-41 42-91.5 55t-94.5-6l-67 67 312 312-42 42-312-312-312 312Zm125-351L171-590q-51-51-53-121t46-124l245 245-119 119Z"
-          />
-        </svg>
-      </a>
-      <div id="section__nav__text">
-        <a href="#home">Home</a>
-        <a href="#contact">Contact</a>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <div id="container_navbar">
+        <div class="text__and__logo">
+          <a href="#">
+            <svg
+              class="logo"
+              xmlns="http://www.w3.org/2000/svg"
+              height="48px"
+              viewBox="0 -960 960 960"
+              width="48px"
+              fill="#FF6C6C"
+            >
+              <path
+                d="m165-120-42-42 420-420q-22-48-10-99.5t57-96.5q45-44 109-56.5T804-806q42 42 28.5 105T772-590q-41 42-91.5 55t-94.5-6l-67 67 312 312-42 42-312-312-312 312Zm125-351L171-590q-51-51-53-121t46-124l245 245-119 119Z"
+              />
+            </svg>
+          </a>
+          <div id="section__nav__text">
+            <a href="#hero">Home</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div id="section__nav__menu">
+          <svg
+            class="hamburger"
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g class="lines">
+              <line class="top" x1="10" y1="15" x2="40" y2="15" />
+              <line class="middle" x1="10" y1="25" x2="40" y2="25" />
+              <line class="bottom" x1="10" y1="35" x2="40" y2="35" />
+            </g>
+          </svg>
+        </div>
       </div>
-    </div>
-    <div id="section__nav__menu">
-      <svg
-        class="hamburger"
-        width="50"
-        height="50"
-        viewBox="0 0 50 50"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g class="lines">
-          <line class="top" x1="10" y1="15" x2="40" y2="15" />
-          <line class="middle" x1="10" y1="25" x2="40" y2="25" />
-          <line class="bottom" x1="10" y1="35" x2="40" y2="35" />
-        </g>
-      </svg>
-    </div>
-  </header>
-  <main>
-    <div class="heroTextWrapper">
-      <video autoplay muted loop class="backgroundVideo">
-        <source src="assets/heroVideoPancake.mp4" type="video/mp4" />
-      </video>
-      <section id="hero">
-          <h1>Disfruta del <span>placer</span> de comer</h1>
+    </header>
+    <main>
+      <div class="heroTextWrapper">
+        <video autoplay muted loop class="backgroundVideo">
+          <source src="assets/heroVideoPancake.mp4" type="video/mp4" />
+        </video>
+        <section id="hero">
+          <h1>Enjoy the <span>pleasure</span> of eating</h1>
+          <p>
+            More than 300 unique recipes, from the simplest to the most complex.
+            All of them delicious.
+          </p>
           <section id="searchBar">
             <form id="searchForm">
               <p id="inputContainer">
                 <span class="input">
-                  <input id="searchInput" type="text" placeholder="Search for a recipe...">
-                  <span id="inputTextDeco"></span>	
+                  <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Search for a recipe..."
+                  />
+                  <span id="inputTextDeco"></span>
                 </span>
               </p>
             </form>
-        </section>
+          </section>
         </section>
       </div>
-
-    <section id="randomRecipe">
-      <button id="randomButton">Discover our suggestions</button>
-    </section>
-    <section id="resultsWrapper">
-      <section id="tabber">
-        <button id="resultsTab">Resultados</button>
-        <button id="detailsTab">Detalles</button>
+      <section id="resultsWrapper">
+        <section id="tabber">
+          <button id="resultsTab">Back</button>
+          <section id="randomRecipe">
+            <button id="randomButton">Random Recipe</button>
+          </section>
+          <section id="favRecipe">
+            <button id="favButton">My Favorite Recipes</button>
+          </section>
+          <button id="detailsTab">Detalles</button>
+        </section>
+        <section id="results" class="resultHidden"></section>
+        <section id="extendedView"></section>
       </section>
-      <section id="results" class="resultHidden"></section>
-      <section id="extendedView"></section>
-    </section>
     </main>
   <footer></footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
