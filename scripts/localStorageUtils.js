@@ -34,7 +34,7 @@ export const getFavArray = () => {
     } else {
       addToFavArray(id);
     }
-    button.textContent = checkIfInFavArray(id) ? "★ Remove from Favorites" : "☆ Add to Favorites";
+    button.textContent = checkIfInFavArray(id) ? "❤️ Remove from Favorites" : "🤍 Add to Favorites";
     button.classList.toggle("favorited", checkIfInFavArray(id));
   }
 
